@@ -37,9 +37,9 @@ return [
 
         'mongodb' => [
             'driver' => 'mongodb',
-            'dsn' => env('DB_URI', 'mongodb+srv://username:password@<atlas-cluster-uri>/myappdb?retryWrites=true&w=majority'),
-            'database' => 'myappdb',
-        ],
+            'dsn'      => env('DB_URI', 'mongodb://localhost:27017'),
+            'database' => 'beatboxd',
+    ],
 
         'sqlite' => [
             'driver' => 'sqlite',
