@@ -1,0 +1,30 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Arima-Medium;
+    src: url('/public/fonts/Arima/static/Arima-Medium.ttf');
+}
+
+@font-face {
+    font-family: Manrope-Regular;
+    src: url('/public/fonts/Manrope/static/Manrope-Regular.ttf');
+}
+
+@font-face {
+    font-family: Manrope-Medium;
+    src: url('/public/fonts/Manrope/static/Manrope-Medium.ttf');
+}
+
+@font-face {
+    font-family: Manrope-Extra-Bold;
+    src: url('/public/fonts/Manrope/static/Manrope-ExtraBold.ttf');
+}
+
+body{
+    background-color: #14181c;
+    font-family: Arima-Medium;
+}

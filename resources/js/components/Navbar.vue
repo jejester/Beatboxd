@@ -1,7 +1,10 @@
 <template>
     <nav class="navbar">
         <div class="container">
-            <a href="/" class="navbar-brand">Beatboxd</a>
+            <div class="navbar-brand">
+                <img src="/public/images/beatboxd.png" alt="">
+                <a href="/" class="navbar-brand-item">Beatboxd</a>
+            </div>
             <ul class="navbar-nav">
                 <li><a href="/albums">Albums</a></li>
                 <li><a href="/reviews">Reviews</a></li>
@@ -20,22 +23,41 @@
 
 <style scoped>
     .navbar {
-        background-color: #333;
-        color: #fff;
+        color: gray;
         padding: 1rem;
     }
-    .navbar-brand {
-        font-size: 1.5rem;
-        color: #fff;
-        text-decoration: none;
+
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
+
+    .navbar-brand {
+        width: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar-brand .navbar-brand-item{
+        font-size: 2.2rem;
+        color: white;
+        text-decoration: none;
+        font-family: Manrope-Extra-Bold;
+    }
+
+    .navbar-brand img{
+        width: auto;
+        height: 5rem;
+    }
+
     .navbar-nav {
         list-style: none;
         display: flex;
         gap: 1rem;
     }
     .navbar-nav li a {
-        color: #fff;
         text-decoration: none;
     }
 </style>
