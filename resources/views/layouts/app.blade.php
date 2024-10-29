@@ -16,6 +16,10 @@
             @yield('content')  <!-- Other content will be injected here -->
         </main>
     </div>
+
+    <h1 class="text-3xl font-bold underline bg-green-900">
+        Hello world!
+    </h1>
     
     @vite('resources/js/app.js')  <!-- Link to your JS files (Vue app) -->
 </body>
