@@ -1,14 +1,23 @@
 import './bootstrap';
-import { createApp } from 'vue/dist/vue.esm-bundler.js';
+import '../css/app.css';
 
-// Import your Vue component
-import NavbarComponent from './components/Navbar.vue';
-import HeaderComponent from './components/Header.vue';
+import { createApp, h } from 'vue';
+import { createInertiaApp } from '@inertiajs/vue3';
+import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
+import { ZiggyVue } from '../../vendor/tightenco/ziggy';
 
-// Create Vue app and register the component
-const app = createApp({});
-app.component('navbar-component', NavbarComponent);
-app.component('header-component', HeaderComponent);
+const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
-// Mount the Vue app to the DOM element with ID 'app'
-app.mount('#app');
+createInertiaApp({
+    title: (title) => `${title} - ${appName}`,
+    resolve: (name) => resolvePageComponent(`./Pages/${name}.vue`, import.meta.glob('./Pages/**/*.vue')),
+    setup({ el, App, props, plugin }) {
+        return createApp({ render: () => h(App, props) })
+            .use(plugin)
+            .use(ZiggyVue)
+            .mount(el);
+    },
+    progress: {
+        color: '#4B5563',
+    },
+});

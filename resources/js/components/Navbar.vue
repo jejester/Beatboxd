@@ -11,7 +11,7 @@ function toggleSidebar() {
 <template>
     <nav class="navbar">
         <div class="navbar-brand">
-            <img class="navbar-brand-item" src="/public/images/beatboxd.png" alt="">
+            <img class="navbar-brand-item" src="../../../public/images/beatboxd.png" alt="">
             <a href="/" class="navbar-brand-item">Beatboxd</a>
         </div>
         <ul class="navbar-nav">
